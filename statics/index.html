@@ -3,9 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Fictionizer</title>
+    <link rel="stylesheet" href="http://localhost:8089/output.css">
+    <script src="https://unpkg.com/htmx.org@1.9.4" integrity="sha384-zUfuhFKKZCbHTY6aRR46gxiqszMk5tcHjsVFxnUo8VMus4kHGVdIYVbOYYNlKmHV" crossorigin="anonymous"></script>
   </head>
-  <body>
-    Welcome
+  <body class="flex flex-col justify-center top-0 bottom-0 left-0 right-0">
+      <h1 class="font-sans font-bold p-5 text-2xl text-center">Welcome</h1>
+      <div id="projects" class="align-middle">
+        <div class="border-2 border-black h-1/5 ml-28 mr-28 p-5 rounded mt-1">
+            <button class="" hx-get="/project" hx-target="#projects" hx-swap="afterbegin">new project...</button>
+        </div>
+      </div>
   </body>
 </html>
-
